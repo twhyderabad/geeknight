@@ -13,7 +13,7 @@ echo "Cloning gh-pages..."
 rm -Rf gh-pages
 git config --global user.email "snap@snap-ci.org"
 git config --global user.name "snap-ci"
-git clone --quiet --branch=gh-pages git@github.com:TWChennai/geeknight.git gh-pages
+git clone --quiet --branch=gh-pages git@github.com:TWHyderabad/geeknight.git gh-pages
 
 echo "Building site..."
 bundle exec nanoc
