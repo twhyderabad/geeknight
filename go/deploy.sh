@@ -5,8 +5,10 @@ bundle install
 echo "Building site..."
 bundle exec nanoc
 
+git checkout gh-pages
+cp -r gh-pages/* ./
+rm -rf gh-pages tmp
 echo "Checking for changes..."
-cd gh-pages
 if [[ -z $(git status -s) ]]; then
   echo "No changes to push"
   exit 0
