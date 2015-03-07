@@ -9,7 +9,7 @@ echo "Building site..."
 bundle exec nanoc
 
 echo "Fetching gh-pages..."
-git fetch gh-pages
+git fetch origin gh-pages
 git checkout --track origin/gh-pages
 cp -r gh-pages/* ./
 rm -rf gh-pages tmp
