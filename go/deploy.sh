@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 
-echo "Reconstituting SSH key..."
-echo $DEPLOY_KEY | sed 's/\\n/\'$'\n/g' > id_geeknight
-chmod 600 id_geeknight
+#echo "Reconstituting SSH key..."
+#echo $DEPLOY_KEY | sed 's/\\n/\'$'\n/g' > id_geeknight
+#chmod 600 id_geeknight
 
-export GIT_SSH=$(pwd)/go/ssh.sh
-export SSH_KEY=$(pwd)/id_geeknight
+#export GIT_SSH=$(pwd)/go/ssh.sh
+#export SSH_KEY=$(pwd)/id_geeknight
 
-set -xe
+#set -xe
 
-echo "Cloning gh-pages..."
-rm -Rf gh-pages
-git config --global user.email "snap@snap-ci.org"
-git config --global user.name "snap-ci"
-git clone --quiet --branch=gh-pages git@github.com:TWHyderabad/geeknight.git gh-pages
+#echo "Cloning gh-pages..."
+#rm -Rf gh-pages
+#git config --global user.email "snap@snap-ci.org"
+#git config --global user.name "snap-ci"
+#git clone --quiet --branch=gh-pages git@github.com:TWHyderabad/geeknight.git gh-pages
 
+cd $SNAP_WORKING_DIR
 echo "Building site..."
 bundle exec nanoc
 
