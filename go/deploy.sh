@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
 cd $SNAP_WORKING_DIR
+
+echo "Installing Gems..."
 bundle install
+
 echo "Building site..."
 bundle exec nanoc
 
-git checkout gh-pages
+echo "Fetching gh-pages..."
+git fetch gh-pages
+git checkout --track origin/gh-pages
 cp -r gh-pages/* ./
 rm -rf gh-pages tmp
+
 echo "Checking for changes..."
 if [[ -z $(git status -s) ]]; then
   echo "No changes to push"
