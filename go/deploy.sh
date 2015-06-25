@@ -10,6 +10,7 @@ bundle exec nanoc
 
 echo "Fetching gh-pages..."
 git fetch origin gh-pages
+git diff Gemfile.lock
 git checkout --track origin/gh-pages
 cp -r gh-pages/* ./
 rm -rf gh-pages tmp
