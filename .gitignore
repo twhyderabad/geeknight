@@ -27,7 +27,6 @@ Icon
 # Nanoc
 /tmp
 /output
-/gh-pages
 *.log
 .bundle
 .rvmrc
