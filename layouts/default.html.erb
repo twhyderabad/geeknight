@@ -1,9 +1,25 @@
 <% render '_layout', title: start_date.strftime("%b %Y") do %>
     <section id="intro" class="feature">
-        <div class="bg-container">
-            <img src="./img/50th_bg.png" alt="ThoughtWorks" align="center" />
+        <div class="row logo">
+            <div class="large-12 columns">
+                <a href="http://www.thoughtworks.com" target="_blank"
+                   onclick="ga('send', 'event', 'tw', 'tw')" class="tw-logo">
+                    <img src="./img/tw-logo.png" alt="ThoughtWorks" align="center" />
+                </a>
+                <h1>Geek Night Hyderabad</h1>
+
+                <h6>an open forum for geeks to connect, discuss &amp; learn latest ideas, technologies and trends in software development</h6>
+
+                <% if @item[:subheader] %>
+                    <h5 class="subheader"><%= @item[:subheader] %></h5>
+                <% end %>
+                <% if @item[:subnote] %>
+                    <div class="subnote"><%= @item[:subnote] %></div>
+                <% end %>
+            </div>
         </div>
-        <div class="row countdown top-margin">
+
+        <div class="row countdown">
             <div class="small-8 small-offset-2 large-4 large-offset-0 columns date">
                 <p><%= @item[:edition] %><sup><%= @item[:edition].ordinal %></sup> edition</p>
                 <h4><%= start_date.strftime("%b %-d").downcase %></h4>
