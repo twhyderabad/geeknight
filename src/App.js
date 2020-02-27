@@ -5,6 +5,7 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import Event from "./pages/Event";
+import Events from "./pages/Events";
 
 function App() {
   return (
@@ -19,11 +20,13 @@ function App() {
       </Helmet>
       <div class="app-container">
         <nav>
-          <Link to="/">Home</Link> | <Link to="/event">Event</Link>
+          <Link to="/">Home</Link> | <Link to="/events">Events</Link> |{" "}
+          <Link to="/events/123">Event</Link>
         </nav>
         <Router>
           <Home path="/" />
-          <Event path="/event" />
+          <Events path="/events" />
+          <Event path="/events/:eventId" />
         </Router>
       </div>
     </>
