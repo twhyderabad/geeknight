@@ -1,0 +1,42 @@
+body {
+  background: red;
+}
+
+nav {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  min-height: 60px;
+  background: white;
+}
+
+.topbar {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.logo {
+  height: 40px;
+}
+.menu-toggle {
+  margin: auto 0;
+}
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+.menu-toggle img {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu-toggle span {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.active {
+  color: blueviolet;
+}
