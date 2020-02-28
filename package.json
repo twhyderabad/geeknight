@@ -1,6 +1,6 @@
 {
   "name": "geeknight",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "dependencies": {
     "@reach/router": "^1.3.1",
