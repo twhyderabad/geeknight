@@ -4,7 +4,7 @@ import App from "./App";
 
 test("renders Home text", () => {
   const { getAllByText } = render(<App />);
-  const linkElements = getAllByText(/Home/i);
+  const linkElements = getAllByText(/Prepare/i);
   for (let linkElement of linkElements) {
     expect(linkElement).toBeInTheDocument();
   }
